@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
-
+var port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
@@ -36,6 +36,6 @@ app.post('/joke', async (req, res) => {
     
 })
 
-app.listen(3000, (req, res) => {
-    console.log('Listening in port 3000');
-})
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port);
+});
