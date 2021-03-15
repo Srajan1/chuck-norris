@@ -1,0 +1,9 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <% for(jk of jokes) {%>
+        <blockquote> <%= jk.joke %> </blockquote>   
+    <%}%> 
+</div>
+
+<%- include('./partials/footer.ejs') %>

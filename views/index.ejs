@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <blockquote>
+            <h4>
+                Enter number of jokes you wanna read
+            </h4>
+        </blockquote>
+    </div>
+    
+  <form action="http://localhost:3000/joke" method="post">
+    <div class="row">
+        <div class="col l6">
+            <input type="number" name="value" />
+        </div>
+        <div class="col l6">
+            <button type="submit" class="btn-large">Submit</button>
+        </div>
+    </div>
+  </form>
+  
+</div>
+
+<%- include('./partials/footer.ejs') %>
